@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #f8faf8;
+    color: #1a2e1f;
+    font-family: var(--font-hind), var(--font-inter), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Animations & Micro-interactions */
+@keyframes pulse-subtle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes glow-cta {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(234, 88, 12, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(234, 88, 12, 0.75);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow-cta 2s ease-in-out infinite;
+}
+
+/* Target scroll margin for clean hash jump */
+#checkout {
+  scroll-margin-top: 80px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #15803d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #166534;
+}
