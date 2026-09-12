@@ -43,15 +43,15 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: "প্রোডাক্ট পাওয়া যায়নি | শ্রীমঙ্গল টি ভ্যালি",
+      title: "প্রোডাক্ট পাওয়া যায়নি | টি-ম্যাক্স (T-Max)",
     };
   }
 
   return {
-    title: `${product.name} | শ্রীমঙ্গল টি ভ্যালি (Sreemangal Tea Valley)`,
+    title: `${product.name} | টি-ম্যাক্স (T-Max)`,
     description: product.shortDescription,
     openGraph: {
-      title: `${product.name} — শ্রীমঙ্গল টি ভ্যালি`,
+      title: `${product.name} — টি-ম্যাক্স (T-Max)`,
       description: product.shortDescription,
       images: [
         {

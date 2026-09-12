@@ -48,7 +48,7 @@ export default function HeroSection({ onOrderClick }: HeroSectionProps) {
             {/* Main Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-[3.25rem] font-black text-green-950 tracking-tight leading-[1.18]">
               শ্রীমঙ্গলের খাঁটি{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-emerald-600 to-green-800 underline decoration-amber-400 decoration-wavy decoration-2">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 via-primary-600 to-primary-800   2">
                 অর্গানিক গ্রিন টি
               </span>
             </h1>

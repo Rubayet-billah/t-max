@@ -189,7 +189,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             <div className="space-y-3 pt-2">
               <Link
                 href={`/checkout?product=${product.id}&pack=${selectedPack.id}&qty=${quantity}`}
-                className="w-full py-4 px-6 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-black text-base sm:text-lg shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all transform active:scale-98 flex items-center justify-center gap-3 animate-glow text-center"
+                className="w-full py-4 px-6 rounded-2xl bg-accent hover:bg-accent-hover text-white font-black text-base sm:text-lg shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all transform active:scale-98 flex items-center justify-center gap-3 animate-glow text-center"
               >
                 <ShoppingBag className="w-5 h-5" />
                 <span>এখনই অর্ডার করুন — ৳{subtotal} (ক্যাশ অন ডেলিভারি)</span>
@@ -201,9 +201,9 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                 )}%20(${encodeURIComponent(selectedPack.size)})%20সম্পর্কে%20জানতে%20চাই।`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 px-6 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 font-bold text-sm border border-emerald-200 transition flex items-center justify-center gap-2 text-center"
+                className="w-full py-3.5 px-6 rounded-2xl bg-secondary-light hover:bg-secondary-100 text-primary-900 font-bold text-sm border border-secondary-200 transition flex items-center justify-center gap-2 text-center"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <MessageCircle className="w-4 h-4 text-secondary" />
                 <span>হোয়াটসঅ্যাপে যেকোনো প্রশ্ন করুন</span>
               </a>
             </div>
@@ -239,7 +239,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             onClick={() => setActiveTab("desc")}
             className={`px-4 py-2.5 rounded-2xl font-bold text-sm transition ${
               activeTab === "desc"
-                ? "bg-green-800 text-white shadow-sm"
+                ? "bg-primary text-white shadow-sm"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -249,7 +249,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             onClick={() => setActiveTab("brewing")}
             className={`px-4 py-2.5 rounded-2xl font-bold text-sm transition ${
               activeTab === "brewing"
-                ? "bg-green-800 text-white shadow-sm"
+                ? "bg-primary text-white shadow-sm"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -259,7 +259,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             onClick={() => setActiveTab("benefits")}
             className={`px-4 py-2.5 rounded-2xl font-bold text-sm transition ${
               activeTab === "benefits"
-                ? "bg-green-800 text-white shadow-sm"
+                ? "bg-primary text-white shadow-sm"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
@@ -269,7 +269,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
             onClick={() => setActiveTab("reviews")}
             className={`px-4 py-2.5 rounded-2xl font-bold text-sm transition ${
               activeTab === "reviews"
-                ? "bg-green-800 text-white shadow-sm"
+                ? "bg-primary text-white shadow-sm"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >

@@ -44,7 +44,6 @@ export default function CheckoutForm({
   const [formError, setFormError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Sync if props change
   React.useEffect(() => {
     if (initialProductId) setProductId(initialProductId);
   }, [initialProductId]);
@@ -179,16 +178,16 @@ export default function CheckoutForm({
   };
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl border border-emerald-200 overflow-hidden">
+    <div className="bg-white rounded-3xl shadow-xl border border-primary-200 overflow-hidden">
       {/* Top Header Banner */}
-      <div className="bg-gradient-to-r from-green-800 via-emerald-800 to-green-900 p-4 sm:p-5 text-white flex items-center justify-between">
+      <div className="bg-gradient-to-r from-primary-800 via-secondary-700 to-primary-900 p-4 sm:p-5 text-white flex items-center justify-between">
         <div className="flex items-center gap-2.5">
           <ShoppingBag className="w-5 h-5 text-amber-300" />
           <span className="font-bold text-sm sm:text-base">
             আপনার অর্ডারের বিবরণ ও ডেলিভারি তথ্য
           </span>
         </div>
-        <span className="text-xs bg-emerald-700/60 px-3 py-1 rounded-full border border-emerald-500/30">
+        <span className="text-xs bg-primary-700/60 px-3 py-1 rounded-full border border-primary-500/30">
           🔒 ১০০% নিরাপদ চেকআউট
         </span>
       </div>
@@ -202,9 +201,9 @@ export default function CheckoutForm({
         )}
 
         {/* Selected Product Summary Snapshot */}
-        <div className="bg-emerald-50/70 p-4 rounded-2xl border border-emerald-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="bg-secondary-light p-4 rounded-2xl border border-primary-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
-            <span className="text-xs font-semibold text-emerald-800 block">নির্বাচিত পণ্য:</span>
+            <span className="text-xs font-semibold text-primary-800 block">নির্বাচিত পণ্য:</span>
             <h4 className="font-bold text-gray-900 text-base">
               {product.name} ({pack.size})
             </h4>
@@ -218,7 +217,7 @@ export default function CheckoutForm({
               <select
                 value={packId}
                 onChange={(e) => setPackId(e.target.value)}
-                className="text-xs font-semibold bg-white border border-emerald-300 rounded-lg px-2.5 py-1.5 text-gray-800 focus:outline-none focus:ring-1 focus:ring-green-600"
+                className="text-xs font-semibold bg-white border border-secondary-200 rounded-lg px-2.5 py-1.5 text-gray-800 focus:outline-none focus:ring-1 focus:ring-primary"
               >
                 {product.packs.map((pk) => (
                   <option key={pk.id} value={pk.id}>
@@ -234,7 +233,7 @@ export default function CheckoutForm({
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-bold text-gray-800 mb-1.5 flex items-center gap-1.5">
-              <User className="w-4 h-4 text-green-700" />
+              <User className="w-4 h-4 text-primary" />
               <span>
                 আপনার পুরো নাম লিখুন <span className="text-red-500">*</span>
               </span>
@@ -245,14 +244,14 @@ export default function CheckoutForm({
               value={customerName}
               onChange={(e) => setCustomerName(e.target.value)}
               placeholder="যেমন: তানভীর আহমেদ"
-              className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm text-gray-900 transition"
+              className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900 transition"
             />
           </div>
 
           <div>
             <label className="block text-sm font-bold text-gray-800 mb-1.5 flex items-center justify-between">
               <span className="flex items-center gap-1.5">
-                <Phone className="w-4 h-4 text-green-700" />
+                <Phone className="w-4 h-4 text-primary" />
                 <span>
                   ১১ ডিজিটের মোবাইল নাম্বার <span className="text-red-500">*</span>
                 </span>
@@ -271,7 +270,7 @@ export default function CheckoutForm({
               className={`w-full px-4 py-3.5 rounded-2xl border text-sm text-gray-900 transition font-mono tracking-wider focus:outline-none ${
                 phoneError
                   ? "border-red-400 bg-red-50/30 focus:ring-2 focus:ring-red-500"
-                  : "border-gray-300 focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  : "border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent"
               }`}
             />
             {phoneError && (
@@ -284,7 +283,7 @@ export default function CheckoutForm({
 
           <div>
             <label className="block text-sm font-bold text-gray-800 mb-1.5 flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-green-700" />
+              <MapPin className="w-4 h-4 text-primary" />
               <span>
                 সম্পূর্ণ ডেলিভারি ঠিকানা <span className="text-red-500">*</span>
               </span>
@@ -295,7 +294,7 @@ export default function CheckoutForm({
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               placeholder="বাসা নং, রোড নং, এলাকা/থানা এবং জেলার নাম লিখুন..."
-              className="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm text-gray-900 transition"
+              className="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-gray-900 transition"
             ></textarea>
           </div>
 
@@ -307,7 +306,7 @@ export default function CheckoutForm({
               <label
                 className={`cursor-pointer p-4 rounded-2xl border-2 transition-all flex items-center justify-between ${
                   deliveryArea === "inside_dhaka"
-                    ? "border-green-700 bg-emerald-50/80 shadow-sm"
+                    ? "border-primary bg-secondary-light shadow-sm"
                     : "border-gray-200 hover:border-gray-300 bg-white"
                 }`}
               >
@@ -317,7 +316,7 @@ export default function CheckoutForm({
                     name="deliveryArea"
                     checked={deliveryArea === "inside_dhaka"}
                     onChange={() => setDeliveryArea("inside_dhaka")}
-                    className="w-4 h-4 text-green-700 focus:ring-green-600"
+                    className="w-4 h-4 text-primary focus:ring-primary"
                   />
                   <div>
                     <span className="font-bold text-sm text-gray-900 block">
@@ -326,13 +325,13 @@ export default function CheckoutForm({
                     <span className="text-xs text-gray-500">২৪ থেকে ৪৮ ঘণ্টায় ডেলিভারি</span>
                   </div>
                 </div>
-                <span className="font-bold text-green-900 text-sm">+৳৭০</span>
+                <span className="font-bold text-primary-900 text-sm">+৳৭০</span>
               </label>
 
               <label
                 className={`cursor-pointer p-4 rounded-2xl border-2 transition-all flex items-center justify-between ${
                   deliveryArea === "outside_dhaka"
-                    ? "border-green-700 bg-emerald-50/80 shadow-sm"
+                    ? "border-primary bg-secondary-light shadow-sm"
                     : "border-gray-200 hover:border-gray-300 bg-white"
                 }`}
               >
@@ -342,7 +341,7 @@ export default function CheckoutForm({
                     name="deliveryArea"
                     checked={deliveryArea === "outside_dhaka"}
                     onChange={() => setDeliveryArea("outside_dhaka")}
-                    className="w-4 h-4 text-green-700 focus:ring-green-600"
+                    className="w-4 h-4 text-primary focus:ring-primary"
                   />
                   <div>
                     <span className="font-bold text-sm text-gray-900 block">
@@ -351,7 +350,7 @@ export default function CheckoutForm({
                     <span className="text-xs text-gray-500">২-৩ দিনে সারা বাংলাদেশ</span>
                   </div>
                 </div>
-                <span className="font-bold text-green-900 text-sm">+৳১৩০</span>
+                <span className="font-bold text-primary-900 text-sm">+৳১৩০</span>
               </label>
             </div>
           </div>
@@ -385,8 +384,8 @@ export default function CheckoutForm({
             <span className="font-semibold text-gray-900">৳{deliveryCharge}</span>
           </div>
           <div className="flex justify-between items-center pt-3 border-t border-gray-200 text-lg font-black text-gray-900">
-            <span className="text-green-900">সর্বমোট প্রদেয় বিল:</span>
-            <span className="text-2xl text-orange-600 font-extrabold">৳{totalPayable}</span>
+            <span className="text-primary-900">সর্বমোট প্রদেয় বিল:</span>
+            <span className="text-2xl text-accent font-extrabold">৳{totalPayable}</span>
           </div>
         </div>
 
@@ -394,7 +393,7 @@ export default function CheckoutForm({
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-4 px-6 rounded-2xl bg-orange-600 hover:bg-orange-700 text-white font-black text-lg sm:text-xl shadow-xl shadow-orange-600/30 hover:shadow-orange-600/50 transition-all transform active:scale-98 disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-3 animate-glow"
+          className="w-full py-4 px-6 rounded-2xl bg-accent hover:bg-accent-hover text-white font-black text-lg sm:text-xl shadow-xl shadow-accent/30 hover:shadow-accent/50 transition-all transform active:scale-98 disabled:opacity-75 disabled:cursor-not-allowed flex items-center justify-center gap-3 animate-glow"
         >
           {isSubmitting ? (
             <>
@@ -411,15 +410,15 @@ export default function CheckoutForm({
 
         <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-500 pt-2">
           <span className="flex items-center gap-1">
-            <ShieldCheck className="w-4 h-4 text-green-700" />
+            <ShieldCheck className="w-4 h-4 text-primary" />
             পণ্য হাতে পেয়ে মূল্য পরিশোধ
           </span>
           <span className="flex items-center gap-1">
-            <Clock className="w-4 h-4 text-green-700" />
+            <Clock className="w-4 h-4 text-primary" />
             ফাস্ট ডেলিভারি
           </span>
           <span className="flex items-center gap-1">
-            <Award className="w-4 h-4 text-green-700" />
+            <Award className="w-4 h-4 text-primary" />
             ৭ দিনের মানিব্যাক গ্যারান্টি
           </span>
         </div>

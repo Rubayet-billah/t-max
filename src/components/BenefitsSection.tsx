@@ -6,9 +6,11 @@ export default function BenefitsSection() {
     <section id="benefits" className="py-12 sm:py-16 bg-white border-y border-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <span className="text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
-            দৈনন্দিন সুস্থতায় প্রকৃতির উপহার
-          </span>
+          <div className="mb-6">
+            <span className="text-emerald-700 font-bold text-xs sm:text-sm tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
+              দৈনন্দিন সুস্থতায় প্রকৃতির উপহার
+            </span>
+          </div>
           <h2 className="text-2xl sm:text-4xl font-black text-green-950 mt-3">
             প্রতিদিন এক কাপ খাঁটি গ্রিন টি কেন খাবেন?
           </h2>

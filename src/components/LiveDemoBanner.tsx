@@ -9,7 +9,7 @@ export default function LiveDemoBanner() {
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-white"></span>
         </span>
         <span>
-          🔴 লাইভ ডেমো স্টোর: এটি একটি লাইভ টেস্ট ফানেল। অর্ডার সাবমিট করলে টেস্ট ডেটা প্রসেস হবে।
+          🔴 লাইভ ডেমো স্টোর: টি-ম্যাক্স (T-Max) টেস্ট ফানেল। অর্ডার সাবমিট করলে টেস্ট ডেটা প্রসেস হবে।
         </span>
       </div>
     </div>

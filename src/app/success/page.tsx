@@ -97,7 +97,7 @@ function SuccessContent() {
         smsGateway: {
           status: "simulated_sent",
           to: phone,
-          message: `ধন্যবাদ ${name}, শ্রীমঙ্গল টি ভ্যালিতে আপনার ${product} অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: ${orderId}। সর্বমোট: ৳${total} (ক্যাশ অন ডেলিভারি)।`,
+          message: `ধন্যবাদ ${name}, টি-ম্যাক্স (T-Max)-এ আপনার ${product} অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: ${orderId}। সর্বমোট: ৳${total} (ক্যাশ অন ডেলিভারি)।`,
         },
         sheetSync: {
           status: "simulated_logged",
@@ -391,10 +391,10 @@ function SuccessContent() {
                   <strong className="text-slate-400">Recipient:</strong> {order.customerPhone}
                 </p>
                 <p>
-                  <strong className="text-slate-400">Sender Masking:</strong> SreemangalTea
+                  <strong className="text-slate-400">Sender Masking:</strong> T-Max
                 </p>
                 <div className="mt-2 p-3 bg-slate-900 rounded-lg border border-slate-800 text-emerald-300">
-                  &ldquo;ধন্যবাদ {order.customerName}, শ্রীমঙ্গল টি ভ্যালিতে আপনার {order.product} ({order.pack}) অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: #{order.orderId}। সর্বমোট: ৳{order.totalAmount} (ক্যাশ অন ডেলিভারি)। শ্রীমঙ্গল টি ভ্যালি।&rdquo;
+                  &ldquo;ধন্যবাদ {order.customerName}, টি-ম্যাক্স (T-Max)-এ আপনার {order.product} ({order.pack}) অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: #{order.orderId}। সর্বমোট: ৳{order.totalAmount} (ক্যাশ অন ডেলিভারি)। টি-ম্যাক্স।&rdquo;
                 </div>
               </div>
             </div>

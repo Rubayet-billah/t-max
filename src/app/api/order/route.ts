@@ -101,10 +101,10 @@ async function triggerMetaConversionsAPI(
  * 2. Bangladeshi SMS Gateway Dispatch Hook (Greenweb / BulkSMSBD / SSL Wireless)
  */
 async function dispatchBanglaSMS(orderId: string, payload: OrderPayload) {
-  const smsBody = `ধন্যবাদ ${payload.customerName}, শ্রীমঙ্গল টি ভ্যালিতে আপনার ${payload.selectedProduct.name} (${payload.selectedProduct.pack}) অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: ${orderId}। সর্বমোট: ৳${payload.totalAmount} (ক্যাশ অন ডেলিভারি)। শ্রীমঙ্গল টি ভ্যালি।`;
+  const smsBody = `ধন্যবাদ ${payload.customerName}, টি-ম্যাক্স (T-Max)-এ আপনার ${payload.selectedProduct.name} (${payload.selectedProduct.pack}) অর্ডারটি গৃহীত হয়েছে। অর্ডার নং: ${orderId}। সর্বমোট: ৳${payload.totalAmount} (ক্যাশ অন ডেলিভারি)। টি-ম্যাক্স।`;
 
   const smsApiKey = process.env.SMS_GATEWAY_API_KEY;
-  const smsSenderId = process.env.SMS_SENDER_ID || "SreemangalTea";
+  const smsSenderId = process.env.SMS_SENDER_ID || "T-Max";
 
   if (smsApiKey) {
     try {
